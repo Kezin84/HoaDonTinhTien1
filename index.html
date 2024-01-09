@@ -265,13 +265,13 @@ input:active{
         <button style="background-color: rgb(255, 251, 0);border:solid 3px rgb(46, 45, 10)" type="button" onclick="stopRecording('productName')"><i class="fa-solid fa-square-check fa-xl"style="color: black;"></i></button>
         
         <label for="quantity">Số lượng:</label>
-        <input type="number" id="quantity" name="quantity" required>
+        <input type="number" id="quantity" name="quantity" step="0.01" required>
         <button style="background-color: rgb(231, 9, 9);border:solid 3px rgb(46, 45, 10)" type="button" onclick="clearForm4()"><i class="fa-solid fa-trash fa-xl" style="color: #ffffff;"></i></button>
         <button style="background-color: rgb(0, 32, 128);border:solid 3px rgb(46, 45, 10)" type="button" onclick="startRecording('quantity')"><i class="fa-solid fa-microphone fa-xl" style="color: #ffffff;"></i></button>
         <button style="background-color: rgb(255, 251, 0);border:solid 3px rgb(46, 45, 10)" type="button" onclick="stopRecording('quantity')"><i class="fa-solid fa-square-check fa-xl"style="color: black;"></i></button>
 
         <label for="price">Giá bán:</label>
-        <input type="number" id="price" name="price" required>
+        <input type="number" id="price" name="price"  step="0.01" required>
       <button style="background-color: rgb(231, 9, 9);border:solid 3px rgb(46, 45, 10)" type="button" onclick="clearForm5()"><i class="fa-solid fa-trash fa-xl" style="color: #ffffff;"></i></button>
       <button style="background-color: rgb(0, 32, 128);border:solid 3px rgb(46, 45, 10)" type="button" onclick="startRecording('price')"><i class="fa-solid fa-microphone fa-xl" style="color: #ffffff;"></i></button>
       <button style="background-color: rgb(255, 251, 0);border:solid 3px rgb(46, 45, 10)" type="button" onclick="stopRecording('price')"><i class="fa-solid fa-square-check fa-xl"style="color: black;"></i></button><br>
@@ -563,7 +563,7 @@ var addItemButton = document.getElementById('add-item-button');
             // Lấy giá trị từ các input
             var productCode = document.getElementById("productCode").value;
             var productName = document.getElementById("productName").value;
-            var quantity = parseInt(document.getElementById("quantity").value, 10);
+            var quantity = parseFloat(document.getElementById("quantity").value, 10);
             var price = parseFloat(document.getElementById("price").value);
             var amount = quantity * price;
             
@@ -619,7 +619,7 @@ var addItemButton = document.getElementById('add-item-button');
     // Lấy giá trị từ các input
     var productCode = document.getElementById("productCode").value;
     var productName = document.getElementById("productName").value;
-    var quantity = parseInt(document.getElementById("quantity").value, 10);
+    var quantity = parseFloat(document.getElementById("quantity").value, 10);
     var price = parseFloat(document.getElementById("price").value);
     var amount = quantity * price;
     
@@ -802,7 +802,7 @@ function editProductTable1() {
     // Lấy giá trị từ các input
     var productCode = document.getElementById("productCode").value;
     var productName = document.getElementById("productName").value;
-    var quantity = parseInt(document.getElementById("quantity").value, 10);
+    var quantity = parseFloat(document.getElementById("quantity").value, 10);
     var price = parseFloat(document.getElementById("price").value);
     var amount = quantity * price;
 
@@ -874,7 +874,7 @@ function editProductTable1() {
     // Lấy giá trị từ các input
     var productCode = document.getElementById("productCode").value;
     var productName = document.getElementById("productName").value;
-    var quantity = parseInt(document.getElementById("quantity").value, 10);
+    var quantity = parseFloat(document.getElementById("quantity").value, 10);
     var price = parseFloat(document.getElementById("price").value);
     var amount = quantity * price;
 
